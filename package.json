@@ -19,8 +19,9 @@
   },
   "homepage": "https://github.com/danmorales209/hamberder-app#readme",
   "dependencies": {
+    "dotenv": "^7.0.0",
     "express": "^4.16.4",
-    "handlebars": "^4.1.1",
+    "express-handlebars": "^3.0.2",
     "mysql": "^2.16.0"
   }
 }
