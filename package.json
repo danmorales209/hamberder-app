@@ -1,0 +1,26 @@
+{
+  "name": "hamberder-app",
+  "version": "1.0.0",
+  "description": "A hamburger ordering app using Node, Express, MySQL, and a custom ORM.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danmorales209/hamberder-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danmorales209/hamberder-app/issues"
+  },
+  "homepage": "https://github.com/danmorales209/hamberder-app#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "handlebars": "^4.1.1",
+    "mysql": "^2.16.0"
+  }
+}
