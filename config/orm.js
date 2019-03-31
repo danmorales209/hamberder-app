@@ -1,5 +1,4 @@
 var connection = require("./connection");
-var mysql = require("mysql");
 
 module.exports = {
     selectAll: function (callback) {
@@ -31,7 +30,7 @@ module.exports = {
         });
     },
 
-    updatedOne: function (column, condition, callback) {
+    updateOne: function (column, condition, callback) {
         let queryString =
             `UPDATE burgers
             SET ??
