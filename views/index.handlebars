@@ -1,0 +1,7 @@
+<h1> My Burgers</h1>
+
+<ul>
+    {{#each burger}}
+    <li>{{id}} | {{burger_name}} | {{#if devoured}} Eaten {{else}} Available {{/if}}</li>
+    {{/each}}
+</ul>

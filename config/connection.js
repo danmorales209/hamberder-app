@@ -1,4 +1,6 @@
+
 var mysql = require('mysql');
+require('dotenv').config();
 
 var connection = mysql.createConnection({
     host: "localhost",
@@ -8,7 +10,7 @@ var connection = mysql.createConnection({
     database: "burgers_db"
 });
 
-mysql.connect(connection, function (error) {
+connection.connect(connection, function (error) {
     if (error) {
         console.log("Error occurred: " + error.stack)
         return;

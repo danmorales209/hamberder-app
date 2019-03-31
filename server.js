@@ -12,11 +12,18 @@ app.use(express.json());
 
 // Setup application to use Handlebars
 app.engine("handlebars", exhbs({ defaultLayout: "main" }));
-app.set("view enginer", "handlebars");
+app.set("view engine", "handlebars");
 
 // Set the public folder to server front-end data
 app.use(express.static("./public"));
 
 // Controller for the application
 require("./controllers/burgers_controllers")(app);
+
+app.listen(PORT, function (error) {
+    if (error) throw error;
+
+    console.clear();
+    console.log(`Listening on Port ${PORT}`);
+});
 
