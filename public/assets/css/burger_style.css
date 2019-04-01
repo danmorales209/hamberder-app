@@ -1,0 +1,60 @@
+
+html {
+    margin: 0;
+}
+body {
+    width:80%;
+    margin: 0 auto;
+}
+
+#left, #center, #right {
+    width: 32%;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+.flex-item {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+#burger-name {
+
+    margin: auto;
+    text-align: center;
+    display: block;
+
+}
+
+.col-left {
+    display: inline-block;
+    width: 60%;
+    height: 100%;
+    margin: .25em 0;
+}
+
+.col-right {
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+    margin: .25em 0;
+}
+
+.eat-burger {
+    margin: .75em;
+}
+
+.display-burger {
+    width: 60%;
+}
+
+#add-burger {
+    display: block;
+    width: 80%;
+    margin: .75em auto;
+    line-height: 1.5em;
+}

@@ -1,7 +1,33 @@
-<h1> My Burgers</h1>
-
-<ul>
-    {{#each burger}}
-    <li>{{id}} | {{burger_name}} | {{#if devoured}} Eaten {{else}} Available {{/if}}</li>
-    {{/each}}
-</ul>
+<div class="flex-container">
+    <div id="left" class="flex-item">
+        <h3 style="text-align: center; margin: 0;">Available Berders</h3>
+        {{#each burger}}
+        {{#unless devoured }}
+        <div class="flex-container">
+            <p class="display-burger flex-item" burger-id="{{id}}">{{id}}. {{burger_name}}</p>
+            <button class="eat-burger flex-item" data="{{id}}">DEVOUR!</button>
+        </div>
+        {{/unless}}
+        {{/each}}
+    </div>
+    <div id="center" class="flex-item">
+        <form>
+            <div>
+                <label for="burger-name" style="margin: 0 auto;">
+                    <h3 style="text-align: center; margin: 0;">Add a Berder to the Menu</h3>
+                </label>
+                <textarea id="burger-name" rows="5" cols="30"
+                    placeholder="What kind of berder would you like to order?"></textarea>
+            </div>
+            <button id="add-burger">Add Berder to Menu</button>
+        </form>
+    </div>
+    <div id="right" class="flex-item">
+        <h3 style="text-align: center; margin: 0;">Devoured Berders</h3>
+        {{#each burger}}
+        {{#if devoured }}
+        <p class="devoured-burger" burger-id={{id}}>{{id}}. {{burger_name}}</p>
+        {{/if}}
+        {{/each}}
+    </div>
+</div>
