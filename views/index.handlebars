@@ -5,7 +5,7 @@
         {{#unless devoured }}
         <div class="flex-container">
             <p class="display-burger flex-item" burger-id="{{id}}">{{id}}. {{burger_name}}</p>
-            <button class="eat-burger flex-item" data="{{id}}">DEVOUR!</button>
+            <button class="eat-burger flex-item" burger-id="{{id}}">DEVOUR!</button>
         </div>
         {{/unless}}
         {{/each}}

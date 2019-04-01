@@ -1,15 +1,20 @@
-
 html {
     margin: 0;
+    height: 100%;
+    background-color: goldenrod;
 }
+
 body {
-    width:80%;
+    width: 80%;
     margin: 0 auto;
 }
 
-#left, #center, #right {
+#left,
+#center,
+#right {
     width: 32%;
 }
+
 
 .flex-container {
     display: flex;
