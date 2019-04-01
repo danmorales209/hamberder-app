@@ -70,32 +70,71 @@ body {
 }
 
 .eat-burger {
-    margin: .75em;
+    margin: 5px;
 }
 
-.display-burger {
+.avail-burger {
     width: 60%;
+    align-self: center;
+}
+
+button {
+    display: block;
+    font-size: 1.5em;
+    border: 3px solid red;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px grey;
+    background-color: rgb(241, 240, 191)
+    
+}
+
+button:hover {
+    animation: 0.15s ease 0s 1 normal forwards  glow;
 }
 
 #add-burger {
     display: block;
     width: 80%;
+    background-color: burlywood;
     margin: .75em auto;
     line-height: 1.5em;
     font-size: 2em;
-    border: 3px solid red;
+
+}
+
+/*#add-burger:hover {
+    animation: 0.15s ease 0s 1 normal forwards  glow;
+}*/
+
+@keyframes glow {
+    from {
+        background-color: burlywood;
+        color: black;
+        
+    }
+
+    to {
+        background-color: maroon;
+        color: white;
+        box-shadow: none;
+        border-color: black;
+        text-shadow: 1px 1px 1px grey;
+    }
+}
+
+.display-burger {
+    align-self: center;
+    background-color: rgb(243, 183, 134);
+    border: 5px ridge darkred;
     border-radius: 5px;
-    background-color: burlywood;
-    box-shadow: 3px 3px 3px white;
-
+    padding-left: 10px;
 }
 
-#add-burger:hover {
-    background-color: maroon;
-    color: white;
-
-}
-
-#add-burger:focus {
-    box-shadow: none;
+.devoured-burger {
+    background-color: rgb(212, 212, 212);
+    border: 3px solid grey;
+    color: rgb(73, 73, 73);
+    border-radius: 5px;
+    padding: 3px;
+    margin: 2.5px auto;
 }
