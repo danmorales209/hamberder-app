@@ -26,10 +26,12 @@
     <div id="right" class="flex-item">
         <!--Devoured burgers display here-->
         <h3 class="sub-title">Devoured Berders</h3>
+        <div class= "flex-container">
         {{#each burger}}
         {{#if devoured }}
-        <p class="devoured-burger" burger-id={{id}}>{{id}}. {{burger_name}}</p>
+        <p class="devoured-burger flex-item" burger-id={{id}}>{{id}}. {{burger_name}}</p>
         {{/if}}
         {{/each}}
+        </div>
     </div>
 </div>
