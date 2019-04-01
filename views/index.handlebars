@@ -1,6 +1,6 @@
 <div class="flex-container">
     <div id="left" class="flex-item">
-        <h3 style="text-align: center; margin: 0;">Available Berders</h3>
+        <h3 class="sub-title">Available Berders</h3>
         {{#each burger}}
         {{#unless devoured }}
         <div class="flex-container">
@@ -14,16 +14,16 @@
         <form>
             <div>
                 <label for="burger-name" style="margin: 0 auto;">
-                    <h3 style="text-align: center; margin: 0;">Add a Berder to the Menu</h3>
+                    <h3 class="sub-title">Add a Berder to the Menu</h3>
                 </label>
                 <textarea id="burger-name" rows="5" cols="30"
                     placeholder="What kind of berder would you like to order?"></textarea>
             </div>
-            <button id="add-burger">Add Berder to Menu</button>
+            <button id="add-burger">Add Berder!</button>
         </form>
     </div>
     <div id="right" class="flex-item">
-        <h3 style="text-align: center; margin: 0;">Devoured Berders</h3>
+        <h3 class="sub-title">Devoured Berders</h3>
         {{#each burger}}
         {{#if devoured }}
         <p class="devoured-burger" burger-id={{id}}>{{id}}. {{burger_name}}</p>

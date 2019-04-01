@@ -33,7 +33,7 @@ module.exports = {
     updateOne: function (column, condition, callback) {
         let queryString =
             `UPDATE burgers
-            SET ??
+            SET ?? = true
             WHERE ${condition};`;
 
         connection.query(queryString, [column], function (err, result) {

@@ -1,3 +1,7 @@
+* {
+    font-family: 'Bangers', cursive;
+}
+
 html {
     margin: 0;
     height: 100%;
@@ -7,6 +11,22 @@ html {
 body {
     width: 80%;
     margin: 0 auto;
+}
+
+#title {
+    margin: auto;
+    display: block;
+    text-align: center;
+    font-size: 5em;
+    text-shadow: 3px 3px 3px white;
+
+}
+
+.sub-title {
+    text-align: center;
+    margin: 2px auto;
+    font-size: 2em;
+    text-shadow: 2px 2px 2px white;
 }
 
 #left,
@@ -62,4 +82,20 @@ body {
     width: 80%;
     margin: .75em auto;
     line-height: 1.5em;
+    font-size: 2em;
+    border: 3px solid red;
+    border-radius: 5px;
+    background-color: burlywood;
+    box-shadow: 3px 3px 3px white;
+
+}
+
+#add-burger:hover {
+    background-color: maroon;
+    color: white;
+
+}
+
+#add-burger:focus {
+    box-shadow: none;
 }

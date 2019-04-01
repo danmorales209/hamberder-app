@@ -1,26 +1,35 @@
-$(document).ready( function() {
-    $("#add-burger").on("click", function() {
-        let newBurger = $("burger-name").val().trim();
+$(document).ready(function () {
 
-        $.post("/api/add", newBurger, function (error) {
-            if (error) {
-                console.log(error.stack);
-                return;
-            }
-        });
+    $("#add-burger").on("click", function (event) {
+        event.preventDefault();
+
+        let newBurger = $("#burger-name").val().trim();
+
+        if (newBurger) {
+            $.post("/api/add", {
+                newBurger
+            }, function (error) {
+                if (error) {
+                    console.log(error.stack);
+                    return;
+                }
+            }).then(function () {
+
+                location.reload(true);
+            });
+        }
+
     });
 
-    $(".eat-burger").on("click", function() {
+    $(".eat-burger").on("click", function () {
         let burgerID = Number($(this).attr("burger-id"));
-        
+
         $.ajax({
-            url: "devour",
+            url: "/api/devour/" + burgerID,
             method: "PUT",
-            data: burgerID,
-            dataType: "json"
-        }).then(function() {
-            location.reload(true);
-        })
+        }).then(function () {
+            window.location.reload(true);
+        });
 
     });
-})
+});
